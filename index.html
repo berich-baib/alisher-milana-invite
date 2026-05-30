@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Алишер & Милана — приглашение</title>
+  <meta name="description" content="Свадебное приглашение Алишера и Миланы — 7 августа, Алматы" />
+  <style>
+    :root{
+      --ivory:#f8f3ea;
+      --paper:#fffaf2;
+      --ink:#201914;
+      --muted:#7a6a5d;
+      --gold:#b7904f;
+      --gold-2:#d8bd7a;
+      --line:rgba(183,144,79,.32);
+      --deep:#17110d;
+      --rose:#efe2d5;
+      --shadow:0 24px 80px rgba(54,38,24,.16);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      color:var(--ink);
+      background:
+        radial-gradient(circle at 20% 10%, rgba(216,189,122,.25), transparent 30%),
+        radial-gradient(circle at 90% 35%, rgba(239,226,213,.7), transparent 28%),
+        linear-gradient(180deg, #fcf7ef 0%, var(--ivory) 42%, #f4eadb 100%);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      overflow-x:hidden;
+    }
+    body:before{
+      content:"";
+      position:fixed;
+      inset:0;
+      pointer-events:none;
+      opacity:.22;
+      background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 240 240' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='240' height='240' filter='url(%23n)' opacity='.25'/%3E%3C/svg%3E");
+      mix-blend-mode:multiply;
+    }
+    a{color:inherit;text-decoration:none}
+    .wrap{width:min(1120px, calc(100% - 32px)); margin:0 auto}
+    .nav{
+      position:fixed; top:16px; left:50%; transform:translateX(-50%); z-index:20;
+      width:min(780px, calc(100% - 28px));
+      display:flex; align-items:center; justify-content:space-between; gap:14px;
+      padding:10px 12px 10px 18px;
+      border:1px solid rgba(183,144,79,.24);
+      background:rgba(255,250,242,.72);
+      backdrop-filter:blur(18px);
+      border-radius:999px;
+      box-shadow:0 12px 34px rgba(54,38,24,.09);
+    }
+    .mark{font-family:Georgia, 'Times New Roman', serif; letter-spacing:.08em; font-size:13px; text-transform:uppercase;color:#6f5632}
+    .nav-links{display:flex; gap:6px; align-items:center}
+    .nav-links a{font-size:13px;color:#6f6258;padding:9px 12px;border-radius:999px}
+    .nav-links a:hover{background:rgba(183,144,79,.12); color:var(--ink)}
+    .btn{
+      display:inline-flex; min-height:46px; align-items:center; justify-content:center; gap:10px;
+      padding:13px 22px; border-radius:999px; border:1px solid rgba(183,144,79,.45);
+      background:linear-gradient(135deg, var(--gold), var(--gold-2));
+      color:#fffaf2; font-weight:650; letter-spacing:.01em;
+      box-shadow:0 14px 36px rgba(183,144,79,.28);
+      cursor:pointer;
+    }
+    .btn.secondary{background:transparent;color:#4d3a25;box-shadow:none;border-color:var(--line)}
+    .hero{min-height:100svh; display:grid; place-items:center; position:relative; padding:112px 0 72px}
+    .hero-card{
+      width:min(940px,100%); min-height:640px; position:relative; overflow:hidden;
+      display:grid; place-items:center; padding:72px 42px;
+      background:linear-gradient(145deg, rgba(255,250,242,.96), rgba(246,236,221,.9));
+      border:1px solid rgba(183,144,79,.35);
+      border-radius:42px;
+      box-shadow:var(--shadow);
+    }
+    .hero-card:before,.hero-card:after{
+      content:""; position:absolute; inset:28px; border:1px solid rgba(183,144,79,.28); border-radius:30px; pointer-events:none;
+    }
+    .hero-card:after{inset:44px;border-color:rgba(183,144,79,.14)}
+    .orb{position:absolute; border-radius:999px; filter:blur(.2px); opacity:.9}
+    .orb.one{width:310px;height:310px;right:-92px;top:-88px;background:radial-gradient(circle,#f2d998,transparent 68%)}
+    .orb.two{width:220px;height:220px;left:-58px;bottom:-54px;background:radial-gradient(circle,#ead7c9,transparent 66%)}
+    .kicker{font-size:12px; letter-spacing:.34em; text-transform:uppercase; color:#876b3f; font-weight:700; margin-bottom:26px}
+    h1{
+      margin:0; text-align:center; font-family:Georgia, 'Times New Roman', serif; font-weight:400;
+      font-size:clamp(56px, 10vw, 132px); line-height:.9; letter-spacing:-.065em;
+    }
+    .amp{display:block; color:var(--gold); font-style:italic; font-size:.55em; line-height:1.1; letter-spacing:-.02em; margin:10px 0}
+    .date{margin:32px 0 0; display:flex; align-items:center; justify-content:center; gap:16px; color:#5e4b37; font-size:clamp(18px,3vw,26px); letter-spacing:.12em; text-transform:uppercase}
+    .date:before,.date:after{content:""; width:54px; height:1px; background:var(--line)}
+    .hero-text{max-width:560px;text-align:center;margin:30px auto 0;color:var(--muted);font-size:18px;line-height:1.7;text-wrap:pretty}
+    .hero-actions{display:flex; gap:12px; justify-content:center; flex-wrap:wrap; margin-top:36px; position:relative; z-index:2}
+    section{padding:84px 0}
+    .section-title{font-family:Georgia, 'Times New Roman', serif;font-weight:400;font-size:clamp(36px,6vw,74px);line-height:1;margin:0 0 18px;text-align:center;letter-spacing:-.045em}
+    .section-lead{max-width:660px;margin:0 auto 42px;text-align:center;color:var(--muted);font-size:18px;line-height:1.65}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .tile{background:rgba(255,250,242,.74);border:1px solid rgba(183,144,79,.22);border-radius:30px;padding:30px;box-shadow:0 16px 52px rgba(54,38,24,.08)}
+    .tile .num{font-family:Georgia,serif;color:var(--gold);font-size:46px;line-height:1;margin-bottom:18px}
+    .tile h3{margin:0 0 10px;font-size:20px}
+    .tile p{margin:0;color:var(--muted);line-height:1.6}
+    .timeline{max-width:760px;margin:0 auto;position:relative}
+    .timeline:before{content:"";position:absolute;left:96px;top:8px;bottom:8px;width:1px;background:var(--line)}
+    .time-row{display:grid;grid-template-columns:80px 1fr;gap:36px;align-items:start;padding:22px 0}
+    .time{font-weight:800;color:#6f5632;letter-spacing:.08em}
+    .event{background:rgba(255,250,242,.65);border:1px solid rgba(183,144,79,.2);padding:24px 26px;border-radius:24px;position:relative}
+    .event:before{content:"";position:absolute;left:-45px;top:28px;width:17px;height:17px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 8px rgba(183,144,79,.13)}
+    .event h3{margin:0 0 6px;font-size:20px}.event p{margin:0;color:var(--muted);line-height:1.55}
+    .dark{background:linear-gradient(145deg,#1c1510,#0f0b08);color:#fffaf2;position:relative;overflow:hidden}
+    .dark:before{content:"";position:absolute;inset:-20%;background:radial-gradient(circle at 50% 0%,rgba(216,189,122,.22),transparent 34%);pointer-events:none}
+    .dark .section-lead,.dark .tile p{color:rgba(255,250,242,.68)}
+    .dark .tile{background:rgba(255,250,242,.055);border-color:rgba(216,189,122,.22);box-shadow:none}
+    .rsvp-card{position:relative;max-width:780px;margin:0 auto;background:rgba(255,250,242,.9);border:1px solid rgba(183,144,79,.32);border-radius:36px;padding:34px;box-shadow:var(--shadow)}
+    .form{display:grid;gap:14px}.split{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    label{display:grid;gap:8px;font-size:13px;color:#6f6258;font-weight:650}
+    input,select,textarea{width:100%;min-height:52px;border-radius:18px;border:1px solid rgba(183,144,79,.27);background:#fffdf8;padding:14px 16px;font:inherit;color:var(--ink);outline:none}
+    textarea{min-height:104px;resize:vertical}
+    input:focus,select:focus,textarea:focus{border-color:var(--gold);box-shadow:0 0 0 4px rgba(183,144,79,.12)}
+    .radio-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:4px}
+    .choice input{display:none}.choice span{display:flex;align-items:center;justify-content:center;min-height:54px;border:1px solid rgba(183,144,79,.28);border-radius:18px;background:#fffdf8;font-weight:750;cursor:pointer}.choice input:checked+span{background:#211813;color:#fffaf2;border-color:#211813}
+    .note{font-size:13px;color:var(--muted);line-height:1.5}.success{display:none;margin-top:14px;padding:14px 16px;border-radius:18px;background:rgba(183,144,79,.12);color:#4d3a25;font-weight:650}.success.show{display:block}
+    .map-card{display:grid;grid-template-columns:1.05fr .95fr;gap:22px;align-items:stretch}.map-visual{min-height:360px;border-radius:34px;border:1px solid var(--line);background:linear-gradient(135deg,#efe3d3,#fffaf2);position:relative;overflow:hidden;box-shadow:var(--shadow)}
+    .map-visual svg{position:absolute;inset:0;width:100%;height:100%;opacity:.7}.pin{position:absolute;left:50%;top:48%;transform:translate(-50%,-50%);width:72px;height:72px;border-radius:50% 50% 50% 0;background:linear-gradient(135deg,var(--gold),var(--gold-2));transform:translate(-50%,-50%) rotate(-45deg);box-shadow:0 20px 40px rgba(183,144,79,.34)}.pin:after{content:"";position:absolute;inset:22px;border-radius:50%;background:#fffaf2}.address{padding:34px;border-radius:34px;background:rgba(255,250,242,.78);border:1px solid rgba(183,144,79,.22)}
+    footer{padding:56px 0 74px;text-align:center;color:var(--muted)}footer .names{font-family:Georgia,serif;font-size:34px;color:var(--ink);margin-bottom:8px}
+    .fade{animation:fadeUp .8s ease both}@keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+    @media (max-width:760px){.nav{top:10px}.nav-links a:not(.keep){display:none}.hero{padding-top:84px}.hero-card{border-radius:30px;min-height:620px;padding:56px 22px}.hero-card:before{inset:16px;border-radius:22px}.hero-card:after{display:none}.date{gap:10px}.date:before,.date:after{width:28px}.grid,.map-card,.split{grid-template-columns:1fr}.timeline:before{left:64px}.time-row{grid-template-columns:58px 1fr;gap:28px}.event:before{left:-37px}.rsvp-card{padding:22px;border-radius:28px}.radio-row{grid-template-columns:1fr}.section-title{text-align:left}.section-lead{text-align:left;margin-left:0}}
+    @media (prefers-reduced-motion: reduce){*{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
+  </style>
+</head>
+<body>
+  <nav class="nav" aria-label="Навигация">
+    <a class="mark" href="#top">A · M</a>
+    <div class="nav-links">
+      <a href="#details">Детали</a>
+      <a href="#timing">Тайминг</a>
+      <a href="#rsvp" class="keep">RSVP</a>
+    </div>
+  </nav>
+
+  <main id="top">
+    <section class="hero">
+      <div class="wrap">
+        <div class="hero-card fade">
+          <div class="orb one"></div><div class="orb two"></div>
+          <div style="position:relative;z-index:1;text-align:center">
+            <div class="kicker">Wedding invitation</div>
+            <h1>Алишер<span class="amp">&</span>Милана</h1>
+            <div class="date">7 августа · Алматы</div>
+            <p class="hero-text">С большим трепетом приглашаем вас разделить с нами день, с которого начнётся новая глава нашей истории.</p>
+            <div class="hero-actions">
+              <a class="btn" href="#rsvp">Подтвердить присутствие</a>
+              <a class="btn secondary" href="#details">Посмотреть детали</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="details">
+      <div class="wrap">
+        <h2 class="section-title">Вечер в Алматы</h2>
+        <p class="section-lead">Премиальный, спокойный и элегантный формат: тёплый свет, живая атмосфера и самые близкие люди рядом.</p>
+        <div class="grid">
+          <article class="tile"><div class="num">01</div><h3>Дата</h3><p>7 августа. Точное время можно поставить после утверждения площадки.</p></article>
+          <article class="tile"><div class="num">02</div><h3>Место</h3><p>Алматы. Адрес ресторана/площадки добавим в финальной версии.</p></article>
+          <article class="tile"><div class="num">03</div><h3>Dress code</h3><p>Вечерняя классика, чёрный, шампань, молочный, бежевый и золото.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="dark" id="timing">
+      <div class="wrap" style="position:relative;z-index:1">
+        <h2 class="section-title">Тайминг дня</h2>
+        <p class="section-lead">Черновой сценарий — легко поменяем под реальное расписание.</p>
+        <div class="timeline">
+          <div class="time-row"><div class="time">16:30</div><div class="event"><h3>Сбор гостей</h3><p>Welcome drinks, первые фотографии и спокойное начало вечера.</p></div></div>
+          <div class="time-row"><div class="time">17:00</div><div class="event"><h3>Церемония</h3><p>Главные слова, кольца и момент, ради которого все собрались.</p></div></div>
+          <div class="time-row"><div class="time">18:00</div><div class="event"><h3>Ужин</h3><p>Праздничная программа, тосты, музыка и вечер с близкими.</p></div></div>
+          <div class="time-row"><div class="time">22:30</div><div class="event"><h3>Финал</h3><p>Торт, танцы и красивое завершение дня.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="place">
+      <div class="wrap map-card">
+        <div class="map-visual" aria-label="Карта Алматы">
+          <svg viewBox="0 0 800 520" preserveAspectRatio="none" aria-hidden="true">
+            <path d="M-40 180 C120 120 210 260 360 180 S590 40 850 160" fill="none" stroke="rgba(183,144,79,.32)" stroke-width="16"/>
+            <path d="M80 520 C170 350 360 360 440 210 S640 80 820 -20" fill="none" stroke="rgba(32,25,20,.12)" stroke-width="10"/>
+            <path d="M-20 360 C170 300 260 420 420 350 S650 260 840 350" fill="none" stroke="rgba(183,144,79,.18)" stroke-width="6"/>
+          </svg>
+          <div class="pin"></div>
+        </div>
+        <div class="address">
+          <div class="kicker">Location</div>
+          <h2 class="section-title" style="text-align:left;margin-bottom:18px">Алматы</h2>
+          <p style="color:var(--muted);line-height:1.7;font-size:18px;margin:0 0 24px">Точный адрес площадки добавим, когда он будет утверждён. В финальной версии кнопка будет открывать 2GIS или Google Maps.</p>
+          <a class="btn secondary" href="#rsvp">Перейти к RSVP</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="rsvp">
+      <div class="wrap">
+        <h2 class="section-title">Подтвердите присутствие</h2>
+        <p class="section-lead">Пожалуйста, ответьте, сможете ли вы быть с нами. Этот блок обязательный — в финальной версии ответы можно собирать в Google Sheets или Telegram.</p>
+        <div class="rsvp-card">
+          <form class="form" id="rsvpForm">
+            <div class="split">
+              <label>Ваше имя<input required name="name" autocomplete="name" placeholder="Например, Аружан" /></label>
+              <label>Количество гостей<select name="guests"><option>1</option><option>2</option><option>3</option><option>4</option></select></label>
+            </div>
+            <label>Ваш ответ
+              <div class="radio-row">
+                <label class="choice"><input type="radio" name="answer" value="Приду" required><span>Приду</span></label>
+                <label class="choice"><input type="radio" name="answer" value="Не приду" required><span>Не приду</span></label>
+              </div>
+            </label>
+            <label>Комментарий / пожелания<textarea name="comment" placeholder="Например: буду с +1, есть пожелания по еде"></textarea></label>
+            <button class="btn" type="submit">Отправить ответ</button>
+            <div class="note">Демо сейчас сохраняет ответ в браузере и готовит текст сообщения. Для настоящего запуска подключим бесплатный сбор ответов.</div>
+            <div class="success" id="successBox"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="names">Алишер & Милана</div>
+    <div>7 августа · Алматы</div>
+  </footer>
+
+  <script>
+    const form = document.getElementById('rsvpForm');
+    const success = document.getElementById('successBox');
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const data = Object.fromEntries(new FormData(form).entries());
+      localStorage.setItem('rsvp_alisher_milana', JSON.stringify({...data, sentAt: new Date().toISOString()}));
+      const text = `RSVP Алишер & Милана%0AИмя: ${encodeURIComponent(data.name)}%0AОтвет: ${encodeURIComponent(data.answer)}%0AГостей: ${encodeURIComponent(data.guests)}%0AКомментарий: ${encodeURIComponent(data.comment || '-')}`;
+      success.innerHTML = `Спасибо! Ответ сохранён в демо. <a href="https://t.me/share/url?url=&text=${text}" target="_blank" rel="noreferrer" style="text-decoration:underline">Отправить текст в Telegram</a>`;
+      success.classList.add('show');
+    });
+  </script>
+</body>
+</html>
