@@ -2,246 +2,117 @@
 <html lang="ru">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>Алишер & Милана — приглашение</title>
   <meta name="description" content="Свадебное приглашение Алишера и Миланы — 7 августа, Алматы" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Great+Vibes&display=swap" rel="stylesheet">
   <style>
     :root{
-      --ivory:#f8f3ea;
-      --paper:#fffaf2;
-      --ink:#201914;
-      --muted:#7a6a5d;
-      --gold:#b7904f;
-      --gold-2:#d8bd7a;
-      --line:rgba(183,144,79,.32);
-      --deep:#17110d;
-      --rose:#efe2d5;
-      --shadow:0 24px 80px rgba(54,38,24,.16);
+      --wine:#76001f;
+      --wine2:#5d0019;
+      --ivory:#f8f0ea;
+      --paper:#fff8f1;
+      --ink:#38302f;
+      --muted:#7a6a63;
+      --gold:#c9a45d;
+      --gold2:#e2c77a;
+      --wax:#b4071d;
+      --wax-dark:#62000c;
+      --shadow:0 24px 70px rgba(44,0,13,.25);
     }
     *{box-sizing:border-box}
     html{scroll-behavior:smooth}
-    body{
-      margin:0;
-      color:var(--ink);
-      background:
-        radial-gradient(circle at 20% 10%, rgba(216,189,122,.25), transparent 30%),
-        radial-gradient(circle at 90% 35%, rgba(239,226,213,.7), transparent 28%),
-        linear-gradient(180deg, #fcf7ef 0%, var(--ivory) 42%, #f4eadb 100%);
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      overflow-x:hidden;
-    }
-    body:before{
-      content:"";
-      position:fixed;
-      inset:0;
-      pointer-events:none;
-      opacity:.22;
-      background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 240 240' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='240' height='240' filter='url(%23n)' opacity='.25'/%3E%3C/svg%3E");
-      mix-blend-mode:multiply;
-    }
-    a{color:inherit;text-decoration:none}
-    .wrap{width:min(1120px, calc(100% - 32px)); margin:0 auto}
-    .nav{
-      position:fixed; top:16px; left:50%; transform:translateX(-50%); z-index:20;
-      width:min(780px, calc(100% - 28px));
-      display:flex; align-items:center; justify-content:space-between; gap:14px;
-      padding:10px 12px 10px 18px;
-      border:1px solid rgba(183,144,79,.24);
-      background:rgba(255,250,242,.72);
-      backdrop-filter:blur(18px);
-      border-radius:999px;
-      box-shadow:0 12px 34px rgba(54,38,24,.09);
-    }
-    .mark{font-family:Georgia, 'Times New Roman', serif; letter-spacing:.08em; font-size:13px; text-transform:uppercase;color:#6f5632}
-    .nav-links{display:flex; gap:6px; align-items:center}
-    .nav-links a{font-size:13px;color:#6f6258;padding:9px 12px;border-radius:999px}
-    .nav-links a:hover{background:rgba(183,144,79,.12); color:var(--ink)}
-    .btn{
-      display:inline-flex; min-height:46px; align-items:center; justify-content:center; gap:10px;
-      padding:13px 22px; border-radius:999px; border:1px solid rgba(183,144,79,.45);
-      background:linear-gradient(135deg, var(--gold), var(--gold-2));
-      color:#fffaf2; font-weight:650; letter-spacing:.01em;
-      box-shadow:0 14px 36px rgba(183,144,79,.28);
-      cursor:pointer;
-    }
-    .btn.secondary{background:transparent;color:#4d3a25;box-shadow:none;border-color:var(--line)}
-    .hero{min-height:100svh; display:grid; place-items:center; position:relative; padding:112px 0 72px}
-    .hero-card{
-      width:min(940px,100%); min-height:640px; position:relative; overflow:hidden;
-      display:grid; place-items:center; padding:72px 42px;
-      background:linear-gradient(145deg, rgba(255,250,242,.96), rgba(246,236,221,.9));
-      border:1px solid rgba(183,144,79,.35);
-      border-radius:42px;
-      box-shadow:var(--shadow);
-    }
-    .hero-card:before,.hero-card:after{
-      content:""; position:absolute; inset:28px; border:1px solid rgba(183,144,79,.28); border-radius:30px; pointer-events:none;
-    }
-    .hero-card:after{inset:44px;border-color:rgba(183,144,79,.14)}
-    .orb{position:absolute; border-radius:999px; filter:blur(.2px); opacity:.9}
-    .orb.one{width:310px;height:310px;right:-92px;top:-88px;background:radial-gradient(circle,#f2d998,transparent 68%)}
-    .orb.two{width:220px;height:220px;left:-58px;bottom:-54px;background:radial-gradient(circle,#ead7c9,transparent 66%)}
-    .kicker{font-size:12px; letter-spacing:.34em; text-transform:uppercase; color:#876b3f; font-weight:700; margin-bottom:26px}
-    h1{
-      margin:0; text-align:center; font-family:Georgia, 'Times New Roman', serif; font-weight:400;
-      font-size:clamp(56px, 10vw, 132px); line-height:.9; letter-spacing:-.065em;
-    }
-    .amp{display:block; color:var(--gold); font-style:italic; font-size:.55em; line-height:1.1; letter-spacing:-.02em; margin:10px 0}
-    .date{margin:32px 0 0; display:flex; align-items:center; justify-content:center; gap:16px; color:#5e4b37; font-size:clamp(18px,3vw,26px); letter-spacing:.12em; text-transform:uppercase}
-    .date:before,.date:after{content:""; width:54px; height:1px; background:var(--line)}
-    .hero-text{max-width:560px;text-align:center;margin:30px auto 0;color:var(--muted);font-size:18px;line-height:1.7;text-wrap:pretty}
-    .hero-actions{display:flex; gap:12px; justify-content:center; flex-wrap:wrap; margin-top:36px; position:relative; z-index:2}
-    section{padding:84px 0}
-    .section-title{font-family:Georgia, 'Times New Roman', serif;font-weight:400;font-size:clamp(36px,6vw,74px);line-height:1;margin:0 0 18px;text-align:center;letter-spacing:-.045em}
-    .section-lead{max-width:660px;margin:0 auto 42px;text-align:center;color:var(--muted);font-size:18px;line-height:1.65}
-    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-    .tile{background:rgba(255,250,242,.74);border:1px solid rgba(183,144,79,.22);border-radius:30px;padding:30px;box-shadow:0 16px 52px rgba(54,38,24,.08)}
-    .tile .num{font-family:Georgia,serif;color:var(--gold);font-size:46px;line-height:1;margin-bottom:18px}
-    .tile h3{margin:0 0 10px;font-size:20px}
-    .tile p{margin:0;color:var(--muted);line-height:1.6}
-    .timeline{max-width:760px;margin:0 auto;position:relative}
-    .timeline:before{content:"";position:absolute;left:96px;top:8px;bottom:8px;width:1px;background:var(--line)}
-    .time-row{display:grid;grid-template-columns:80px 1fr;gap:36px;align-items:start;padding:22px 0}
-    .time{font-weight:800;color:#6f5632;letter-spacing:.08em}
-    .event{background:rgba(255,250,242,.65);border:1px solid rgba(183,144,79,.2);padding:24px 26px;border-radius:24px;position:relative}
-    .event:before{content:"";position:absolute;left:-45px;top:28px;width:17px;height:17px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 8px rgba(183,144,79,.13)}
-    .event h3{margin:0 0 6px;font-size:20px}.event p{margin:0;color:var(--muted);line-height:1.55}
-    .dark{background:linear-gradient(145deg,#1c1510,#0f0b08);color:#fffaf2;position:relative;overflow:hidden}
-    .dark:before{content:"";position:absolute;inset:-20%;background:radial-gradient(circle at 50% 0%,rgba(216,189,122,.22),transparent 34%);pointer-events:none}
-    .dark .section-lead,.dark .tile p{color:rgba(255,250,242,.68)}
-    .dark .tile{background:rgba(255,250,242,.055);border-color:rgba(216,189,122,.22);box-shadow:none}
-    .rsvp-card{position:relative;max-width:780px;margin:0 auto;background:rgba(255,250,242,.9);border:1px solid rgba(183,144,79,.32);border-radius:36px;padding:34px;box-shadow:var(--shadow)}
-    .form{display:grid;gap:14px}.split{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-    label{display:grid;gap:8px;font-size:13px;color:#6f6258;font-weight:650}
-    input,select,textarea{width:100%;min-height:52px;border-radius:18px;border:1px solid rgba(183,144,79,.27);background:#fffdf8;padding:14px 16px;font:inherit;color:var(--ink);outline:none}
-    textarea{min-height:104px;resize:vertical}
-    input:focus,select:focus,textarea:focus{border-color:var(--gold);box-shadow:0 0 0 4px rgba(183,144,79,.12)}
-    .radio-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:4px}
-    .choice input{display:none}.choice span{display:flex;align-items:center;justify-content:center;min-height:54px;border:1px solid rgba(183,144,79,.28);border-radius:18px;background:#fffdf8;font-weight:750;cursor:pointer}.choice input:checked+span{background:#211813;color:#fffaf2;border-color:#211813}
-    .note{font-size:13px;color:var(--muted);line-height:1.5}.success{display:none;margin-top:14px;padding:14px 16px;border-radius:18px;background:rgba(183,144,79,.12);color:#4d3a25;font-weight:650}.success.show{display:block}
-    .map-card{display:grid;grid-template-columns:1.05fr .95fr;gap:22px;align-items:stretch}.map-visual{min-height:360px;border-radius:34px;border:1px solid var(--line);background:linear-gradient(135deg,#efe3d3,#fffaf2);position:relative;overflow:hidden;box-shadow:var(--shadow)}
-    .map-visual svg{position:absolute;inset:0;width:100%;height:100%;opacity:.7}.pin{position:absolute;left:50%;top:48%;transform:translate(-50%,-50%);width:72px;height:72px;border-radius:50% 50% 50% 0;background:linear-gradient(135deg,var(--gold),var(--gold-2));transform:translate(-50%,-50%) rotate(-45deg);box-shadow:0 20px 40px rgba(183,144,79,.34)}.pin:after{content:"";position:absolute;inset:22px;border-radius:50%;background:#fffaf2}.address{padding:34px;border-radius:34px;background:rgba(255,250,242,.78);border:1px solid rgba(183,144,79,.22)}
-    footer{padding:56px 0 74px;text-align:center;color:var(--muted)}footer .names{font-family:Georgia,serif;font-size:34px;color:var(--ink);margin-bottom:8px}
-    .fade{animation:fadeUp .8s ease both}@keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
-    @media (max-width:760px){.nav{top:10px}.nav-links a:not(.keep){display:none}.hero{padding-top:84px}.hero-card{border-radius:30px;min-height:620px;padding:56px 22px}.hero-card:before{inset:16px;border-radius:22px}.hero-card:after{display:none}.date{gap:10px}.date:before,.date:after{width:28px}.grid,.map-card,.split{grid-template-columns:1fr}.timeline:before{left:64px}.time-row{grid-template-columns:58px 1fr;gap:28px}.event:before{left:-37px}.rsvp-card{padding:22px;border-radius:28px}.radio-row{grid-template-columns:1fr}.section-title{text-align:left}.section-lead{text-align:left;margin-left:0}}
-    @media (prefers-reduced-motion: reduce){*{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
+    body{margin:0;background:var(--wine);color:#fff;font-family:'Cormorant Garamond', Georgia, serif;overflow-x:hidden}
+    a{color:inherit;text-decoration:none}.script{font-family:'Great Vibes', cursive;font-weight:400}.wrap{width:min(480px,100%);margin:0 auto;padding:0 18px}.wide{width:min(760px,100%)}
+
+    /* Opening envelope */
+    .opener{position:fixed;inset:0;z-index:50;display:grid;place-items:center;background:#eee7df;overflow:hidden;transition:opacity .8s ease .85s,visibility .8s ease .85s}.opener.hidden{opacity:0;visibility:hidden;pointer-events:none}
+    .paper-texture{position:absolute;inset:-8%;background:radial-gradient(circle at 40% 22%,rgba(255,255,255,.8),transparent 28%),radial-gradient(circle at 70% 65%,rgba(173,155,133,.2),transparent 35%),url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='260' height='260'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.04' numOctaves='4' seed='11'/%3E%3C/filter%3E%3Crect width='260' height='260' filter='url(%23n)' opacity='.32'/%3E%3C/svg%3E");opacity:.72;mix-blend-mode:multiply}
+    .fold{position:absolute;top:50%;width:92vw;height:1.5px;background:linear-gradient(90deg,transparent,rgba(96,84,73,.32),transparent);filter:blur(.12px)}.fold.l{left:-25vw;transform:rotate(38deg)}.fold.r{right:-25vw;transform:rotate(-38deg)}
+    .flap-top,.flap-bottom{position:absolute;left:0;width:100%;pointer-events:none;transition:transform 1.05s cubic-bezier(.18,.82,.22,1),opacity .85s ease}.flap-top{top:0;height:55%;clip-path:polygon(0 0,100% 0,50% 84%);background:linear-gradient(180deg,rgba(255,255,255,.42),rgba(213,203,191,.13));border-bottom:1px solid rgba(111,96,84,.18);transform-origin:top center}.flap-bottom{bottom:0;height:58%;clip-path:polygon(0 100%,100% 100%,50% 8%);background:linear-gradient(0deg,rgba(255,255,255,.35),rgba(213,203,191,.11));border-top:1px solid rgba(111,96,84,.11);transform-origin:bottom center}
+    .seal-btn{position:relative;z-index:3;width:clamp(165px,34vw,245px);height:clamp(165px,34vw,245px);border:0;border-radius:50%;padding:0;background:transparent;cursor:pointer;filter:drop-shadow(0 20px 26px rgba(87,0,12,.38));animation:pulse 2.2s ease-in-out infinite}@keyframes pulse{50%{transform:scale(1.045)}}
+    .wax{position:absolute;inset:0;border-radius:48% 52% 51% 49%/53% 46% 54% 47%;background:radial-gradient(circle at 30% 22%,rgba(255,155,135,.78),transparent 16%),radial-gradient(circle at 70% 77%,rgba(42,0,5,.48),transparent 35%),linear-gradient(145deg,#d31b32 0%,#a8061b 45%,#5d000b 100%);box-shadow:inset 0 9px 16px rgba(255,170,150,.25),inset 0 -20px 28px rgba(35,0,5,.58),0 8px 0 rgba(72,0,8,.35),0 30px 48px rgba(95,0,15,.38)}
+    .wax:before{content:"";position:absolute;inset:16%;border-radius:50%;border:4px solid rgba(67,0,8,.36);box-shadow:inset 0 3px 7px rgba(255,190,170,.24)}.wax:after{content:"";position:absolute;inset:-9px;border-radius:47% 53% 49% 51%/46% 55% 45% 54%;background:radial-gradient(circle at 11% 45%,#8d0414 0 9px,transparent 10px),radial-gradient(circle at 87% 35%,#be0d24 0 11px,transparent 12px),radial-gradient(circle at 72% 92%,#74000d 0 10px,transparent 11px),radial-gradient(circle at 31% 8%,#c9162b 0 8px,transparent 9px);z-index:-1}
+    .mono{position:absolute;inset:0;display:grid;place-items:center;color:rgba(255,231,211,.9);font-size:clamp(84px,16vw,132px);text-shadow:0 2px 2px rgba(35,0,5,.42);transform:translateY(4px)}.tap{position:absolute;left:50%;top:calc(50% + clamp(108px,22vw,158px));transform:translateX(-50%);z-index:3;color:rgba(61,49,40,.64);font:700 13px/1 -apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;letter-spacing:.22em;text-transform:uppercase;white-space:nowrap}
+    .opener.open .flap-top{transform:translateY(-20%) rotateX(70deg);opacity:.18}.opener.open .flap-bottom{transform:translateY(22%) rotateX(-36deg);opacity:.12}.opener.open .fold{opacity:.12}.opener.open .seal-btn{animation:none;transform:scale(.22) rotate(-12deg);opacity:0;transition:transform .65s ease,opacity .45s ease}.opener.open .tap{opacity:0;transition:opacity .3s ease}
+
+    .site{display:none;opacity:0;transform:translateY(26px);transition:opacity 1s ease .35s,transform 1s ease .35s}body.revealed .site{display:block;opacity:1;transform:none}
+    section{position:relative;text-align:center;padding:78px 0}.wine{background:var(--wine);color:#fff}.ivory{background:var(--ivory);color:var(--ink)}
+    .hero{padding-top:0;min-height:100svh;display:grid;align-content:start;justify-items:center}.poster{position:relative;width:min(470px,100%);min-height:min(760px,100svh);overflow:hidden;padding:58px 22px 92px;display:grid;place-items:center;background:linear-gradient(180deg,rgba(118,0,31,.03) 0%,rgba(118,0,31,.02) 48%,var(--wine) 100%),radial-gradient(circle at 50% 48%,rgba(255,255,255,.78),transparent 22%),linear-gradient(180deg,#b9d4df 0%,#f3e5d1 47%,#c5a17b 100%);box-shadow:inset 0 -95px 85px var(--wine)}
+    .poster:before{content:"";position:absolute;inset:0;opacity:.92;background:linear-gradient(90deg,transparent 3%,rgba(80,62,48,.34) 4% 6%,transparent 7% 12%,rgba(80,62,48,.26) 13% 15%,transparent 16% 84%,rgba(80,62,48,.26) 85% 87%,transparent 88% 93%,rgba(80,62,48,.34) 94% 96%,transparent 97%),radial-gradient(ellipse at 50% 57%,rgba(63,93,112,.34),transparent 24%);mask-image:linear-gradient(180deg,transparent 0%,black 18%,black 73%,transparent 95%)}
+    .doves{position:absolute;right:42px;top:76px;font-size:38px;opacity:.92;transform:rotate(-13deg)}.flower{position:absolute;right:18px;bottom:82px;width:125px;height:125px;border-radius:50%;background:radial-gradient(circle at 48% 48%,#ffd3c6 0 7%,transparent 8%),conic-gradient(from 20deg,#7f001a,#d1263d,#89001c,#be1732,#630015,#d1263d,#7f001a);filter:saturate(1.12) drop-shadow(0 14px 18px rgba(50,0,10,.35));opacity:.96}.rings{position:absolute;left:44%;bottom:112px;width:46px;height:30px;border:3px solid var(--gold);border-radius:50%;transform:rotate(-18deg);opacity:.9}.rings:after{content:"";position:absolute;left:20px;top:-2px;width:40px;height:28px;border:3px solid var(--gold);border-radius:50%}
+    .hero-copy{position:relative;z-index:2;text-shadow:0 2px 8px rgba(54,0,14,.25)}.wedding{font-size:42px;margin:0 0 8px}.date{font-size:30px;letter-spacing:.08em;margin:0 0 94px}.couple{font-size:clamp(78px,19vw,118px);line-height:.82;margin:0}.amp{font-size:.55em;display:block;margin:5px 0}.dear{font-size:38px;margin:48px 0 0}.intro{max-width:430px;margin:22px auto 0;font-size:23px;line-height:1.55;opacity:.93}
+
+    /* Tilda-like torn / beautiful transitions */
+    .shape{position:absolute;left:0;width:100%;height:82px;line-height:0;overflow:hidden;z-index:3;pointer-events:none}.shape svg{display:block;width:calc(100% + 2px);height:100%}.shape.bottom{bottom:-1px}.shape.top{top:-1px;transform:rotate(180deg)}.shape .iv{fill:var(--ivory)}.shape .wi{fill:var(--wine)}
+    h2{font-size:52px;margin:0 0 30px}.lead{font-size:21px;line-height:1.55;max-width:430px;margin:0 auto 34px;color:inherit;opacity:.86}.ivory .lead{color:var(--muted);opacity:1}
+    .countdown{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;max-width:500px;margin:0 auto}.num{font-size:clamp(36px,10vw,56px);line-height:1}.label{font-size:16px;margin-top:7px;opacity:.72}
+    .timeline{max-width:430px;margin:0 auto;position:relative;display:grid;gap:28px}.timeline:before{content:"✦";position:absolute;left:50%;top:-35px;transform:translateX(-50%);font-size:31px}.timeline:after{content:"";position:absolute;top:5px;bottom:5px;left:50%;width:1px;background:rgba(255,255,255,.78)}.event{display:grid;grid-template-columns:1fr 34px 1fr;gap:10px;align-items:center;position:relative;z-index:1}.time{text-align:right;font-size:30px}.dot{width:11px;height:11px;margin:auto;background:#fff;transform:rotate(45deg)}.ename{text-align:left;font-size:23px}
+    .map{height:260px;margin:0 auto 22px;background:linear-gradient(135deg,rgba(255,255,255,.45),rgba(0,0,0,.03)),repeating-linear-gradient(35deg,rgba(80,80,80,.10) 0 2px,transparent 2px 32px),#ded3c8;border:8px solid #fff;box-shadow:0 16px 35px rgba(0,0,0,.12);display:grid;place-items:center;color:rgba(56,48,47,.52);font-size:20px}.address{font-size:22px;line-height:1.45;max-width:440px;margin:0 auto}.dress{height:300px;position:relative;max-width:430px;margin:0 auto}.frame{position:absolute;width:205px;height:250px;border:9px solid var(--gold);background:linear-gradient(135deg,#f4e3cb,#b8865c);box-shadow:0 24px 35px rgba(0,0,0,.28)}.frame.one{left:18px;top:20px;transform:rotate(-8deg)}.frame.two{right:18px;top:36px;transform:rotate(8deg);background:linear-gradient(135deg,#efe6df,#7c3d45)}
+    .rsvp-card{max-width:520px;margin:0 auto;background:rgba(255,252,247,.94);border:1px solid rgba(201,164,93,.36);border-radius:34px;padding:28px;box-shadow:0 22px 60px rgba(35,0,10,.22);text-align:left}.form{display:grid;gap:14px}.split{display:grid;grid-template-columns:1fr 1fr;gap:14px}label{display:grid;gap:8px;font-size:14px;color:#6f6258;font-weight:600}input,select,textarea{width:100%;min-height:52px;border-radius:18px;border:1px solid rgba(201,164,93,.32);background:#fffdf8;padding:14px 16px;font:inherit;color:var(--ink);outline:none}textarea{min-height:104px;resize:vertical}input:focus,select:focus,textarea:focus{border-color:var(--gold);box-shadow:0 0 0 4px rgba(201,164,93,.14)}.radio-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:4px}.choice input{display:none}.choice span{display:flex;align-items:center;justify-content:center;min-height:54px;border:1px solid rgba(201,164,93,.32);border-radius:18px;background:#fffdf8;font-weight:700;cursor:pointer}.choice input:checked+span{background:var(--wine);color:#fff;border-color:var(--wine)}.btn{display:inline-flex;min-height:48px;align-items:center;justify-content:center;border:0;border-radius:999px;background:var(--ivory);color:var(--wine);padding:13px 24px;font:600 18px 'Cormorant Garamond',serif;letter-spacing:.08em;text-transform:uppercase;box-shadow:0 12px 22px rgba(0,0,0,.16);cursor:pointer}.rsvp-card .btn{background:linear-gradient(135deg,var(--gold),var(--gold2));color:#fff;width:100%}.note{font-size:13px;color:var(--muted);line-height:1.45}.success{display:none;margin-top:12px;padding:14px 16px;border-radius:18px;background:rgba(201,164,93,.14);color:#4d3a25;font-weight:650}.success.show{display:block}.final-photo{width:min(440px,100%);height:430px;margin:44px auto 0;background:linear-gradient(135deg,rgba(118,0,31,.18),rgba(255,255,255,.09)),url('PHOTO_URL_HERE') center/cover no-repeat,#d9c5b6;border:10px solid rgba(255,255,255,.88)}
+    footer{padding:52px 18px 70px;text-align:center;background:var(--wine);color:#fff}.footnames{font-size:40px;margin-bottom:8px}
+    @media(max-width:520px){section{padding:64px 0}.poster{min-height:720px}.flower{width:106px;height:106px;right:10px}.split,.radio-row{grid-template-columns:1fr}.event .time{font-size:25px}.event .ename{font-size:20px}.frame{width:180px;height:230px}.frame.one{left:4px}.frame.two{right:2px}.rsvp-card{padding:22px;border-radius:28px}}
+    @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
   </style>
 </head>
 <body>
-  <nav class="nav" aria-label="Навигация">
-    <a class="mark" href="#top">A · M</a>
-    <div class="nav-links">
-      <a href="#details">Детали</a>
-      <a href="#timing">Тайминг</a>
-      <a href="#rsvp" class="keep">RSVP</a>
-    </div>
-  </nav>
+  <div class="opener" id="opener">
+    <div class="paper-texture"></div><div class="fold l"></div><div class="fold r"></div><div class="flap-top"></div><div class="flap-bottom"></div>
+    <button class="seal-btn" id="seal" aria-label="Открыть приглашение"><span class="wax"></span><span class="mono script">A</span></button>
+    <div class="tap">нажми на сургуч</div>
+  </div>
 
-  <main id="top">
-    <section class="hero">
-      <div class="wrap">
-        <div class="hero-card fade">
-          <div class="orb one"></div><div class="orb two"></div>
-          <div style="position:relative;z-index:1;text-align:center">
-            <div class="kicker">Wedding invitation</div>
-            <h1>Алишер<span class="amp">&</span>Милана</h1>
-            <div class="date">7 августа · Алматы</div>
-            <p class="hero-text">С большим трепетом приглашаем вас разделить с нами день, с которого начнётся новая глава нашей истории.</p>
-            <div class="hero-actions">
-              <a class="btn" href="#rsvp">Подтвердить присутствие</a>
-              <a class="btn secondary" href="#details">Посмотреть детали</a>
-            </div>
-          </div>
+  <main class="site" id="top">
+    <section class="wine hero">
+      <div class="poster">
+        <div class="doves">♡ ♡</div><div class="flower"></div><div class="rings"></div>
+        <div class="hero-copy">
+          <p class="script wedding">Wedding Day</p><p class="date">07.08.26</p>
+          <h1 class="script couple">Алишер<span class="amp">&</span>Милана</h1>
         </div>
       </div>
+      <div class="wrap"><p class="script dear">Dear Friends and Family,</p><p class="intro">С радостью приглашаем вас разделить с нами день нашей свадьбы.</p></div>
+      <div class="shape bottom"><svg viewBox="0 0 1440 100" preserveAspectRatio="none"><path class="iv" d="M0,42 C118,88 204,16 330,52 C470,94 560,22 710,48 C856,74 946,96 1088,44 C1218,-4 1328,18 1440,58 L1440,100 L0,100 Z"/></svg></div>
     </section>
 
-    <section id="details">
-      <div class="wrap">
-        <h2 class="section-title">Вечер в Алматы</h2>
-        <p class="section-lead">Премиальный, спокойный и элегантный формат: тёплый свет, живая атмосфера и самые близкие люди рядом.</p>
-        <div class="grid">
-          <article class="tile"><div class="num">01</div><h3>Дата</h3><p>7 августа. Точное время можно поставить после утверждения площадки.</p></article>
-          <article class="tile"><div class="num">02</div><h3>Место</h3><p>Алматы. Адрес ресторана/площадки добавим в финальной версии.</p></article>
-          <article class="tile"><div class="num">03</div><h3>Dress code</h3><p>Вечерняя классика, чёрный, шампань, молочный, бежевый и золото.</p></article>
-        </div>
-      </div>
+    <section class="ivory">
+      <div class="wrap wide"><h2 class="script">The Celebration Begins In</h2><div class="countdown"><div><div class="num" id="d">00</div><div class="label">Days</div></div><div><div class="num" id="h">00</div><div class="label">Hours</div></div><div><div class="num" id="m">00</div><div class="label">Minutes</div></div><div><div class="num" id="s">00</div><div class="label">Seconds</div></div></div></div>
+      <div class="shape bottom"><svg viewBox="0 0 1440 100" preserveAspectRatio="none"><path class="wi" d="M0,56 C140,8 246,82 388,44 C520,10 620,24 742,62 C880,104 1000,76 1116,36 C1254,-12 1348,20 1440,48 L1440,100 L0,100 Z"/></svg></div>
     </section>
 
-    <section class="dark" id="timing">
-      <div class="wrap" style="position:relative;z-index:1">
-        <h2 class="section-title">Тайминг дня</h2>
-        <p class="section-lead">Черновой сценарий — легко поменяем под реальное расписание.</p>
-        <div class="timeline">
-          <div class="time-row"><div class="time">16:30</div><div class="event"><h3>Сбор гостей</h3><p>Welcome drinks, первые фотографии и спокойное начало вечера.</p></div></div>
-          <div class="time-row"><div class="time">17:00</div><div class="event"><h3>Церемония</h3><p>Главные слова, кольца и момент, ради которого все собрались.</p></div></div>
-          <div class="time-row"><div class="time">18:00</div><div class="event"><h3>Ужин</h3><p>Праздничная программа, тосты, музыка и вечер с близкими.</p></div></div>
-          <div class="time-row"><div class="time">22:30</div><div class="event"><h3>Финал</h3><p>Торт, танцы и красивое завершение дня.</p></div></div>
-        </div>
-      </div>
+    <section class="wine" id="timing">
+      <div class="wrap wide"><h2 class="script">Schedule of Events</h2><div class="timeline"><div class="event"><div class="time">16:30</div><div class="dot"></div><div class="ename">Сбор гостей</div></div><div class="event"><div class="time">17:00</div><div class="dot"></div><div class="ename">Церемония</div></div><div class="event"><div class="time">18:00</div><div class="dot"></div><div class="ename">Ужин</div></div><div class="event"><div class="time">22:30</div><div class="dot"></div><div class="ename">Финал</div></div></div></div>
+      <div class="shape bottom"><svg viewBox="0 0 1440 100" preserveAspectRatio="none"><path class="iv" d="M0,40 C90,78 188,70 290,32 C420,-16 540,42 650,56 C790,76 920,18 1030,34 C1190,56 1288,92 1440,38 L1440,100 L0,100 Z"/></svg></div>
     </section>
 
-    <section id="place">
-      <div class="wrap map-card">
-        <div class="map-visual" aria-label="Карта Алматы">
-          <svg viewBox="0 0 800 520" preserveAspectRatio="none" aria-hidden="true">
-            <path d="M-40 180 C120 120 210 260 360 180 S590 40 850 160" fill="none" stroke="rgba(183,144,79,.32)" stroke-width="16"/>
-            <path d="M80 520 C170 350 360 360 440 210 S640 80 820 -20" fill="none" stroke="rgba(32,25,20,.12)" stroke-width="10"/>
-            <path d="M-20 360 C170 300 260 420 420 350 S650 260 840 350" fill="none" stroke="rgba(183,144,79,.18)" stroke-width="6"/>
-          </svg>
-          <div class="pin"></div>
-        </div>
-        <div class="address">
-          <div class="kicker">Location</div>
-          <h2 class="section-title" style="text-align:left;margin-bottom:18px">Алматы</h2>
-          <p style="color:var(--muted);line-height:1.7;font-size:18px;margin:0 0 24px">Точный адрес площадки добавим, когда он будет утверждён. В финальной версии кнопка будет открывать 2GIS или Google Maps.</p>
-          <a class="btn secondary" href="#rsvp">Перейти к RSVP</a>
-        </div>
-      </div>
+    <section class="ivory" id="place">
+      <div class="wrap wide"><h2 class="script">Location</h2><div class="map">карта / фото места</div><p class="address">Алматы<br>Название ресторана / адрес площадки</p></div>
+      <div class="shape bottom"><svg viewBox="0 0 1440 100" preserveAspectRatio="none"><path class="wi" d="M0,48 C130,6 248,44 356,60 C490,80 600,2 738,42 C870,82 980,96 1110,48 C1240,0 1348,24 1440,68 L1440,100 L0,100 Z"/></svg></div>
     </section>
 
-    <section id="rsvp">
-      <div class="wrap">
-        <h2 class="section-title">Подтвердите присутствие</h2>
-        <p class="section-lead">Пожалуйста, ответьте, сможете ли вы быть с нами. Этот блок обязательный — в финальной версии ответы можно собирать в Google Sheets или Telegram.</p>
-        <div class="rsvp-card">
-          <form class="form" id="rsvpForm">
-            <div class="split">
-              <label>Ваше имя<input required name="name" autocomplete="name" placeholder="Например, Аружан" /></label>
-              <label>Количество гостей<select name="guests"><option>1</option><option>2</option><option>3</option><option>4</option></select></label>
-            </div>
-            <label>Ваш ответ
-              <div class="radio-row">
-                <label class="choice"><input type="radio" name="answer" value="Приду" required><span>Приду</span></label>
-                <label class="choice"><input type="radio" name="answer" value="Не приду" required><span>Не приду</span></label>
-              </div>
-            </label>
-            <label>Комментарий / пожелания<textarea name="comment" placeholder="Например: буду с +1, есть пожелания по еде"></textarea></label>
-            <button class="btn" type="submit">Отправить ответ</button>
-            <div class="note">Демо сейчас сохраняет ответ в браузере и готовит текст сообщения. Для настоящего запуска подключим бесплатный сбор ответов.</div>
-            <div class="success" id="successBox"></div>
-          </form>
-        </div>
-      </div>
+    <section class="wine">
+      <div class="wrap wide"><h2 class="script">Dress Code</h2><p class="lead">Вечерняя классика: чёрный, шампань, молочный, бежевый и золото.</p><div class="dress"><div class="frame one"></div><div class="frame two"></div></div></div>
+      <div class="shape bottom"><svg viewBox="0 0 1440 100" preserveAspectRatio="none"><path class="iv" d="M0,54 C112,24 214,0 336,44 C472,94 590,74 720,38 C862,-2 960,26 1088,58 C1228,92 1336,42 1440,28 L1440,100 L0,100 Z"/></svg></div>
     </section>
+
+    <section class="ivory" id="rsvp">
+      <div class="wrap wide"><h2 class="script">Confirm Your Attendance</h2><p class="lead">Пожалуйста, ответьте, сможете ли вы быть с нами.</p><div class="rsvp-card"><form class="form" id="rsvpForm"><div class="split"><label>Ваше имя<input required name="name" autocomplete="name" placeholder="Например, Аружан" /></label><label>Количество гостей<select name="guests"><option>1</option><option>2</option><option>3</option><option>4</option></select></label></div><label>Ваш ответ<div class="radio-row"><label class="choice"><input type="radio" name="answer" value="Приду" required><span>Приду</span></label><label class="choice"><input type="radio" name="answer" value="Не приду" required><span>Не приду</span></label></div></label><label>Комментарий / пожелания<textarea name="comment" placeholder="Например: буду с +1, есть пожелания по еде"></textarea></label><button class="btn" type="submit">Отправить ответ</button><div class="note">Пока это демо: ответ сохраняется в браузере и готовит текст для Telegram. Потом подключим реальный сбор ответов.</div><div class="success" id="successBox"></div></form></div></div>
+      <div class="shape bottom"><svg viewBox="0 0 1440 100" preserveAspectRatio="none"><path class="wi" d="M0,48 C128,88 232,12 360,42 C500,74 604,90 732,42 C890,-18 1006,36 1124,54 C1262,74 1340,34 1440,52 L1440,100 L0,100 Z"/></svg></div>
+    </section>
+
+    <section class="wine"><div class="wrap"><h2 class="script">Hope to see you there!</h2><div class="final-photo"></div></div></section>
   </main>
-
-  <footer>
-    <div class="names">Алишер & Милана</div>
-    <div>7 августа · Алматы</div>
-  </footer>
+  <footer><div class="script footnames">Алишер & Милана</div><div>7 августа · Алматы</div></footer>
 
   <script>
-    const form = document.getElementById('rsvpForm');
-    const success = document.getElementById('successBox');
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const data = Object.fromEntries(new FormData(form).entries());
-      localStorage.setItem('rsvp_alisher_milana', JSON.stringify({...data, sentAt: new Date().toISOString()}));
-      const text = `RSVP Алишер & Милана%0AИмя: ${encodeURIComponent(data.name)}%0AОтвет: ${encodeURIComponent(data.answer)}%0AГостей: ${encodeURIComponent(data.guests)}%0AКомментарий: ${encodeURIComponent(data.comment || '-')}`;
-      success.innerHTML = `Спасибо! Ответ сохранён в демо. <a href="https://t.me/share/url?url=&text=${text}" target="_blank" rel="noreferrer" style="text-decoration:underline">Отправить текст в Telegram</a>`;
-      success.classList.add('show');
-    });
+    const opener=document.getElementById('opener'), seal=document.getElementById('seal');
+    seal.addEventListener('click',()=>{opener.classList.add('open');document.body.classList.add('revealed');setTimeout(()=>opener.classList.add('hidden'),1050)});
+    const target=new Date('2026-08-07T16:30:00+05:00').getTime();
+    function tick(){const left=Math.max(0,target-Date.now());d.textContent=String(Math.floor(left/86400000)).padStart(2,'0');h.textContent=String(Math.floor(left/3600000)%24).padStart(2,'0');m.textContent=String(Math.floor(left/60000)%60).padStart(2,'0');s.textContent=String(Math.floor(left/1000)%60).padStart(2,'0')}tick();setInterval(tick,1000);
+    const form=document.getElementById('rsvpForm'), success=document.getElementById('successBox');
+    form.addEventListener('submit',(e)=>{e.preventDefault();const data=Object.fromEntries(new FormData(form).entries());localStorage.setItem('rsvp_alisher_milana',JSON.stringify({...data,sentAt:new Date().toISOString()}));const text=`RSVP Алишер & Милана%0AИмя: ${encodeURIComponent(data.name)}%0AОтвет: ${encodeURIComponent(data.answer)}%0AГостей: ${encodeURIComponent(data.guests)}%0AКомментарий: ${encodeURIComponent(data.comment||'-')}`;success.innerHTML=`Спасибо! Ответ сохранён в демо. <a href="https://t.me/share/url?url=&text=${text}" target="_blank" rel="noreferrer" style="text-decoration:underline">Отправить текст в Telegram</a>`;success.classList.add('show')});
   </script>
 </body>
 </html>
