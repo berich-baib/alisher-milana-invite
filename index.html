@@ -2,48 +2,279 @@
 <html lang="ru">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Алишер & Милана — приглашение</title>
-  <meta name="description" content="Свадебное приглашение Алишера и Миланы" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&family=Port+Lligat+Slab&display=swap" rel="stylesheet">
+  <meta name="description" content="Свадебное приглашение Алишера и Миланы — 7 августа, Алматы" />
   <style>
-    :root{--black:#000;--white:#fff;--graphite:#292929;--line:#111;--muted:#4b4b4b;--paper:#fff;--silk:#f1eee9;--font:'PT Sans',Arial,sans-serif;--slab:'Port Lligat Slab',Georgia,serif;--max:560px}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#fff;color:#000;font-family:var(--font);overflow-x:hidden}button,input,label{font:inherit}a{color:inherit}.page{min-height:100vh;opacity:0;transform:translateY(18px);transition:opacity 1s ease,transform 1s ease}body.opened .page{opacity:1;transform:none}
-    .lock{position:fixed;inset:0;z-index:100;background:var(--graphite);display:grid;place-items:center;color:#fff;transition:opacity .85s ease,visibility .85s ease}.lock.hidden{opacity:0;visibility:hidden;pointer-events:none}.lock-inner{display:flex;flex-direction:column;align-items:center;transform:translateY(16px)}.lock-photo{width:min(270px,70vw);height:min(340px,88vw);border:4px solid #eee;background:linear-gradient(rgba(0,0,0,.24),rgba(0,0,0,.24)),url('https://static.tildacdn.com/tild3437-3838-4164-a366-313965336436/Real_Wedding___Yeons.jpg') center/cover;filter:grayscale(1) contrast(1.08);box-shadow:0 22px 70px rgba(0,0,0,.32)}.lock-btn{width:64px;height:64px;margin-top:22px;border:1.5px solid #fff;border-radius:50%;background:transparent;color:#fff;display:grid;place-items:center;cursor:pointer;transition:transform .25s ease,opacity .25s ease}.lock-btn:hover{transform:scale(.96);opacity:.78}
-    .music{position:fixed;right:14px;top:14px;z-index:90;width:46px;height:46px;border:1px solid rgba(255,255,255,.55);border-radius:50%;background:rgba(0,0,0,.42);color:#fff;display:grid;place-items:center;box-shadow:0 12px 25px rgba(0,0,0,.18);cursor:pointer;backdrop-filter:blur(6px)}.music.playing{animation:spin 8s linear infinite}@keyframes spin{to{transform:rotate(360deg)}}
-    .hero{min-height:100svh;position:relative;display:grid;place-items:center;overflow:hidden;color:#fff;text-align:center;background:linear-gradient(rgba(0,0,0,.24),rgba(0,0,0,.38)),url('https://static.tildacdn.com/tild3437-3838-4164-a366-313965336436/Real_Wedding___Yeons.jpg') center/cover no-repeat;filter:grayscale(1)}.hero:after{content:"";position:absolute;inset:0;background:radial-gradient(circle at center,transparent 0 46%,rgba(0,0,0,.26) 100%);pointer-events:none}.hero-content{position:relative;z-index:2;width:min(620px,92vw);min-height:88vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:48px 0 32px}.monogram{position:relative;width:min(380px,82vw);height:min(380px,82vw);display:grid;place-items:center;margin-top:auto}.big-letter{position:absolute;font-family:Georgia,serif;font-size:clamp(155px,38vw,250px);font-weight:400;line-height:.8;color:#fff;opacity:.94}.big-letter.m{left:3%;top:15%;transform:skewX(-8deg)}.big-letter.a{right:2%;top:15%;transform:skewX(-8deg)}.vertical{position:absolute;left:50%;top:14%;height:68%;writing-mode:vertical-rl;text-orientation:mixed;transform:translateX(-50%);font-family:var(--slab);font-size:17px;letter-spacing:.18em;text-transform:uppercase}.countdown{display:flex;justify-content:center;gap:17px;flex-wrap:wrap;margin-top:-10px}.cell{width:64px;height:64px;border:1px solid rgba(255,255,255,.82);border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1}.cell b{font-size:26px;font-weight:400}.cell span{font-family:var(--slab);font-size:11px;margin-top:5px}.scroll-note{margin-top:auto;font-size:10px;letter-spacing:.09em;text-transform:uppercase;line-height:1.35}.open-note{font-size:15px;font-weight:700;line-height:1.35;opacity:0;transition:opacity .45s ease}body.opened .open-note{opacity:1}
+    :root{
+      --ivory:#f8f3ea;
+      --paper:#fffaf2;
+      --ink:#201914;
+      --muted:#7a6a5d;
+      --gold:#b7904f;
+      --gold-2:#d8bd7a;
+      --line:rgba(183,144,79,.32);
+      --deep:#17110d;
+      --rose:#efe2d5;
+      --shadow:0 24px 80px rgba(54,38,24,.16);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      color:var(--ink);
+      background:
+        radial-gradient(circle at 20% 10%, rgba(216,189,122,.25), transparent 30%),
+        radial-gradient(circle at 90% 35%, rgba(239,226,213,.7), transparent 28%),
+        linear-gradient(180deg, #fcf7ef 0%, var(--ivory) 42%, #f4eadb 100%);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      overflow-x:hidden;
+    }
+    body:before{
+      content:"";
+      position:fixed;
+      inset:0;
+      pointer-events:none;
+      opacity:.22;
+      background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 240 240' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='240' height='240' filter='url(%23n)' opacity='.25'/%3E%3C/svg%3E");
+      mix-blend-mode:multiply;
+    }
+    a{color:inherit;text-decoration:none}
+    .wrap{width:min(1120px, calc(100% - 32px)); margin:0 auto}
+    .nav{
+      position:fixed; top:16px; left:50%; transform:translateX(-50%); z-index:20;
+      width:min(780px, calc(100% - 28px));
+      display:flex; align-items:center; justify-content:space-between; gap:14px;
+      padding:10px 12px 10px 18px;
+      border:1px solid rgba(183,144,79,.24);
+      background:rgba(255,250,242,.72);
+      backdrop-filter:blur(18px);
+      border-radius:999px;
+      box-shadow:0 12px 34px rgba(54,38,24,.09);
+    }
+    .mark{font-family:Georgia, 'Times New Roman', serif; letter-spacing:.08em; font-size:13px; text-transform:uppercase;color:#6f5632}
+    .nav-links{display:flex; gap:6px; align-items:center}
+    .nav-links a{font-size:13px;color:#6f6258;padding:9px 12px;border-radius:999px}
+    .nav-links a:hover{background:rgba(183,144,79,.12); color:var(--ink)}
+    .btn{
+      display:inline-flex; min-height:46px; align-items:center; justify-content:center; gap:10px;
+      padding:13px 22px; border-radius:999px; border:1px solid rgba(183,144,79,.45);
+      background:linear-gradient(135deg, var(--gold), var(--gold-2));
+      color:#fffaf2; font-weight:650; letter-spacing:.01em;
+      box-shadow:0 14px 36px rgba(183,144,79,.28);
+      cursor:pointer;
+    }
+    .btn.secondary{background:transparent;color:#4d3a25;box-shadow:none;border-color:var(--line)}
+    .hero{min-height:100svh; display:grid; place-items:center; position:relative; padding:112px 0 72px}
+    .hero-card{
+      width:min(940px,100%); min-height:640px; position:relative; overflow:hidden;
+      display:grid; place-items:center; padding:72px 42px;
+      background:linear-gradient(145deg, rgba(255,250,242,.96), rgba(246,236,221,.9));
+      border:1px solid rgba(183,144,79,.35);
+      border-radius:42px;
+      box-shadow:var(--shadow);
+    }
+    .hero-card:before,.hero-card:after{
+      content:""; position:absolute; inset:28px; border:1px solid rgba(183,144,79,.28); border-radius:30px; pointer-events:none;
+    }
+    .hero-card:after{inset:44px;border-color:rgba(183,144,79,.14)}
+    .orb{position:absolute; border-radius:999px; filter:blur(.2px); opacity:.9}
+    .orb.one{width:310px;height:310px;right:-92px;top:-88px;background:radial-gradient(circle,#f2d998,transparent 68%)}
+    .orb.two{width:220px;height:220px;left:-58px;bottom:-54px;background:radial-gradient(circle,#ead7c9,transparent 66%)}
+    .kicker{font-size:12px; letter-spacing:.34em; text-transform:uppercase; color:#876b3f; font-weight:700; margin-bottom:26px}
+    h1{
+      margin:0; text-align:center; font-family:Georgia, 'Times New Roman', serif; font-weight:400;
+      font-size:clamp(56px, 10vw, 132px); line-height:.9; letter-spacing:-.065em;
+    }
+    .amp{display:block; color:var(--gold); font-style:italic; font-size:.55em; line-height:1.1; letter-spacing:-.02em; margin:10px 0}
+    .date{margin:32px 0 0; display:flex; align-items:center; justify-content:center; gap:16px; color:#5e4b37; font-size:clamp(18px,3vw,26px); letter-spacing:.12em; text-transform:uppercase}
+    .date:before,.date:after{content:""; width:54px; height:1px; background:var(--line)}
+    .hero-text{max-width:560px;text-align:center;margin:30px auto 0;color:var(--muted);font-size:18px;line-height:1.7;text-wrap:pretty}
+    .hero-actions{display:flex; gap:12px; justify-content:center; flex-wrap:wrap; margin-top:36px; position:relative; z-index:2}
+    section{padding:84px 0}
+    .section-title{font-family:Georgia, 'Times New Roman', serif;font-weight:400;font-size:clamp(36px,6vw,74px);line-height:1;margin:0 0 18px;text-align:center;letter-spacing:-.045em}
+    .section-lead{max-width:660px;margin:0 auto 42px;text-align:center;color:var(--muted);font-size:18px;line-height:1.65}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .tile{background:rgba(255,250,242,.74);border:1px solid rgba(183,144,79,.22);border-radius:30px;padding:30px;box-shadow:0 16px 52px rgba(54,38,24,.08)}
+    .tile .num{font-family:Georgia,serif;color:var(--gold);font-size:46px;line-height:1;margin-bottom:18px}
+    .tile h3{margin:0 0 10px;font-size:20px}
+    .tile p{margin:0;color:var(--muted);line-height:1.6}
+    .timeline{max-width:760px;margin:0 auto;position:relative}
+    .timeline:before{content:"";position:absolute;left:96px;top:8px;bottom:8px;width:1px;background:var(--line)}
+    .time-row{display:grid;grid-template-columns:80px 1fr;gap:36px;align-items:start;padding:22px 0}
+    .time{font-weight:800;color:#6f5632;letter-spacing:.08em}
+    .event{background:rgba(255,250,242,.65);border:1px solid rgba(183,144,79,.2);padding:24px 26px;border-radius:24px;position:relative}
+    .event:before{content:"";position:absolute;left:-45px;top:28px;width:17px;height:17px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 8px rgba(183,144,79,.13)}
+    .event h3{margin:0 0 6px;font-size:20px}.event p{margin:0;color:var(--muted);line-height:1.55}
+    .dark{background:linear-gradient(145deg,#1c1510,#0f0b08);color:#fffaf2;position:relative;overflow:hidden}
+    .dark:before{content:"";position:absolute;inset:-20%;background:radial-gradient(circle at 50% 0%,rgba(216,189,122,.22),transparent 34%);pointer-events:none}
+    .dark .section-lead,.dark .tile p{color:rgba(255,250,242,.68)}
+    .dark .tile{background:rgba(255,250,242,.055);border-color:rgba(216,189,122,.22);box-shadow:none}
+    .rsvp-card{position:relative;max-width:780px;margin:0 auto;background:rgba(255,250,242,.9);border:1px solid rgba(183,144,79,.32);border-radius:36px;padding:34px;box-shadow:var(--shadow)}
+    .form{display:grid;gap:14px}.split{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    label{display:grid;gap:8px;font-size:13px;color:#6f6258;font-weight:650}
+    input,select,textarea{width:100%;min-height:52px;border-radius:18px;border:1px solid rgba(183,144,79,.27);background:#fffdf8;padding:14px 16px;font:inherit;color:var(--ink);outline:none}
+    textarea{min-height:104px;resize:vertical}
+    input:focus,select:focus,textarea:focus{border-color:var(--gold);box-shadow:0 0 0 4px rgba(183,144,79,.12)}
+    .radio-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:4px}
+    .choice input{display:none}.choice span{display:flex;align-items:center;justify-content:center;min-height:54px;border:1px solid rgba(183,144,79,.28);border-radius:18px;background:#fffdf8;font-weight:750;cursor:pointer}.choice input:checked+span{background:#211813;color:#fffaf2;border-color:#211813}
+    .note{font-size:13px;color:var(--muted);line-height:1.5}.success{display:none;margin-top:14px;padding:14px 16px;border-radius:18px;background:rgba(183,144,79,.12);color:#4d3a25;font-weight:650}.success.show{display:block}
+    .map-card{display:grid;grid-template-columns:1.05fr .95fr;gap:22px;align-items:stretch}.map-visual{min-height:360px;border-radius:34px;border:1px solid var(--line);background:linear-gradient(135deg,#efe3d3,#fffaf2);position:relative;overflow:hidden;box-shadow:var(--shadow)}
+    .map-visual svg{position:absolute;inset:0;width:100%;height:100%;opacity:.7}.pin{position:absolute;left:50%;top:48%;transform:translate(-50%,-50%);width:72px;height:72px;border-radius:50% 50% 50% 0;background:linear-gradient(135deg,var(--gold),var(--gold-2));transform:translate(-50%,-50%) rotate(-45deg);box-shadow:0 20px 40px rgba(183,144,79,.34)}.pin:after{content:"";position:absolute;inset:22px;border-radius:50%;background:#fffaf2}.address{padding:34px;border-radius:34px;background:rgba(255,250,242,.78);border:1px solid rgba(183,144,79,.22)}
+    footer{padding:56px 0 74px;text-align:center;color:var(--muted)}footer .names{font-family:Georgia,serif;font-size:34px;color:var(--ink);margin-bottom:8px}
+    .fade{animation:fadeUp .8s ease both}@keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+    @media (max-width:760px){.nav{top:10px}.nav-links a:not(.keep){display:none}.hero{padding-top:84px}.hero-card{border-radius:30px;min-height:620px;padding:56px 22px}.hero-card:before{inset:16px;border-radius:22px}.hero-card:after{display:none}.date{gap:10px}.date:before,.date:after{width:28px}.grid,.map-card,.split{grid-template-columns:1fr}.timeline:before{left:64px}.time-row{grid-template-columns:58px 1fr;gap:28px}.event:before{left:-37px}.rsvp-card{padding:22px;border-radius:28px}.radio-row{grid-template-columns:1fr}.section-title{text-align:left}.section-lead{text-align:left;margin-left:0}}
+    @media (prefers-reduced-motion: reduce){*{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
+
+    /* Restored intro from monochrome reference */
+    .lock{position:fixed;inset:0;z-index:100;background:#292929;display:grid;place-items:center;color:#fff;transition:opacity .85s ease,visibility .85s ease}.lock.hidden{opacity:0;visibility:hidden;pointer-events:none}.lock-inner{display:flex;flex-direction:column;align-items:center;transform:translateY(16px)}.lock-photo{width:min(270px,70vw);height:min(340px,88vw);border:4px solid #eee;background:linear-gradient(rgba(0,0,0,.24),rgba(0,0,0,.24)),url('https://static.tildacdn.com/tild3437-3838-4164-a366-313965336436/Real_Wedding___Yeons.jpg') center/cover;filter:grayscale(1) contrast(1.08);box-shadow:0 22px 70px rgba(0,0,0,.32)}.lock-btn{width:64px;height:64px;margin-top:22px;border:1.5px solid #fff;border-radius:50%;background:transparent;color:#fff;display:grid;place-items:center;cursor:pointer;transition:transform .25s ease,opacity .25s ease}.lock-btn:hover{transform:scale(.96);opacity:.78}
+    .music{position:fixed;right:14px;top:14px;z-index:90;width:46px;height:46px;border:1px solid rgba(255,255,255,.55);border-radius:50%;background:rgba(0,0,0,.42);color:#fff;display:grid;place-items:center;box-shadow:0 12px 25px rgba(0,0,0,.18);cursor:pointer;backdrop-filter:blur(6px)}.music.playing{animation:musicSpin 8s linear infinite}@keyframes musicSpin{to{transform:rotate(360deg)}}
     .progress-heart{position:fixed;left:50%;top:50%;z-index:40;width:34px;height:34px;margin:-17px 0 0 -17px;border:1px solid #111;border-radius:50%;background:#fff;color:#000;display:grid;place-items:center;font-size:15px;box-shadow:0 10px 28px rgba(0,0,0,.12);opacity:0;transform:translateY(16px);transition:opacity .5s ease,transform .5s ease;pointer-events:none}body.opened .progress-heart{opacity:1;transform:none}
-    section{position:relative}.white{background:#fff;text-align:center;padding:88px 20px}.inner{width:min(var(--max),100%);margin:0 auto}.ornament{width:min(440px,84vw);height:26px;margin:0 auto 44px;position:relative}.ornament:before,.ornament:after{content:"";position:absolute;top:50%;width:calc(50% - 28px);border-top:1px dashed var(--line)}.ornament:before{left:0}.ornament:after{right:0}.heart{position:absolute;top:4px;left:50%;transform:translateX(-50%);font-size:17px}.kicker{font-family:var(--slab);font-size:clamp(39px,8vw,76px);font-weight:400;line-height:.95;letter-spacing:.01em;text-transform:uppercase;margin:0 0 42px}.lead{font-size:clamp(18px,2.4vw,20px);line-height:1.36;font-weight:700;max-width:440px;margin:0 auto}.names-date{margin-top:48px;font-size:20px;font-weight:700;letter-spacing:.03em}
-    .timeline-section{padding-top:46px}.timeline{position:relative;width:min(660px,100%);margin:0 auto;padding:24px 0 12px}.timeline:before{content:"";position:absolute;top:0;bottom:0;left:50%;border-left:1px solid #111;transform:translateX(-.5px)}.timeline:after,.top-heart{position:absolute;left:50%;transform:translateX(-50%);background:#fff;line-height:1}.top-heart{top:-9px}.timeline:after{content:"♥";bottom:-12px;font-size:17px}.event{display:grid;grid-template-columns:1fr 110px 1fr;gap:28px;align-items:center;min-height:150px}.event-title{font-size:19px;font-weight:700;text-align:right}.event-title:after{content:"";display:inline-block;width:120px;border-top:1px dashed #111;vertical-align:middle;margin-left:15px}.event-time{font-size:40px;font-weight:700;line-height:1;background:#fff;z-index:2;padding:6px 0}.event-desc{font-size:18px;line-height:1.35;font-weight:700;text-align:left;max-width:220px}.venue{font-size:20px;line-height:1.35;font-weight:700;margin:22px auto 34px}.map-link{display:inline-block;min-width:180px;border:1px solid #111;padding:10px 36px;text-decoration:none;font-size:20px;font-weight:700;letter-spacing:.02em;transition:background .2s,color .2s}.map-link:hover{background:#111;color:#fff}.silk{min-height:470px;display:grid;place-items:center;padding:110px 20px 90px;text-align:center;background:linear-gradient(rgba(255,255,255,.72),rgba(255,255,255,.86)),url('https://optim.tildacdn.com/tild3361-6165-4039-b436-326632626265/-/format/webp/photo.png.webp') center/cover no-repeat,#f2f0ed}.note-text{max-width:610px;margin:0 auto;font-size:20px;line-height:1.45;font-weight:700}.small-note{max-width:760px;margin:44px auto 0;font-size:17px;line-height:1.45;font-weight:700}.dress p{max-width:540px;margin:0 auto 42px;font-size:20px;line-height:1.35;font-weight:700}.palette{display:flex;justify-content:center;gap:16px;flex-wrap:wrap;margin-top:22px}.swatch{width:54px;height:54px;border-radius:50%;border:1px solid rgba(0,0,0,.12)}.swatch:nth-child(1){background:#f4eee8}.swatch:nth-child(2){background:#d6c3b5}.swatch:nth-child(3){background:#b29b8b}.swatch:nth-child(4){background:#7f7168}.swatch:nth-child(5){background:#252525}
-    form{width:min(560px,100%);margin:0 auto;text-align:left}.form-label,.question{display:block;text-align:center;font-size:18px;line-height:1.3;font-weight:700;margin:0 0 14px}.field{width:100%;height:54px;border:1px solid #111;background:#fff;padding:0 18px;font-size:17px;outline:none;margin-bottom:30px;border-radius:0}.options{display:grid;gap:12px;margin-bottom:32px}.option{display:flex;align-items:center;gap:12px;font-size:17px;line-height:1.25;cursor:pointer;min-height:28px}input[type=radio],input[type=checkbox]{appearance:none;width:20px;height:20px;border:1px solid #111;flex:0 0 20px;display:grid;place-items:center;background:#fff}input[type=radio]{border-radius:50%}input[type=radio]:before,input[type=checkbox]:before{content:"";width:10px;height:10px;background:#111;transform:scale(0);transition:transform .12s}input[type=radio]:before{border-radius:50%}input:checked:before{transform:scale(1)}.submit{width:100%;min-height:54px;border:1px solid #111;background:#111;color:#fff;font-size:20px;font-weight:700;cursor:pointer}.status{min-height:24px;margin-top:18px;text-align:center;font-weight:700}.contacts{padding:42px 20px 88px;text-align:center}.contacts p{font-size:20px;font-weight:700;line-height:1.6;margin:0}
-    @media(max-width:720px){.monogram{width:min(330px,88vw);height:min(330px,88vw)}.big-letter{font-size:clamp(135px,42vw,205px)}.countdown{gap:10px}.cell{width:58px;height:58px}.cell b{font-size:23px}.white{padding-left:18px;padding-right:18px}.event{grid-template-columns:1fr;gap:8px;min-height:0;padding:34px 0}.timeline:before{left:28px}.top-heart,.timeline:after{left:28px}.event-title,.event-desc,.event-time{text-align:left;margin-left:58px}.event-title:after{width:78px;margin-left:12px}.event-time{font-size:38px;padding:0}.event-desc{max-width:none;font-size:17px}.silk{min-height:420px}.music{right:10px;top:10px}}
-    @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition:none!important;animation:none!important}.music.playing{animation:none}}
+    body:not(.opened) .nav{opacity:0;pointer-events:none}body.opened .nav{opacity:1}
+    .hero.monochrome{min-height:100svh;position:relative;display:grid;place-items:center;overflow:hidden;color:#fff;text-align:center;background:linear-gradient(rgba(0,0,0,.24),rgba(0,0,0,.38)),url('https://static.tildacdn.com/tild3437-3838-4164-a366-313965336436/Real_Wedding___Yeons.jpg') center/cover no-repeat!important;filter:grayscale(1);padding:0}.hero.monochrome:after{content:"";position:absolute;inset:0;background:radial-gradient(circle at center,transparent 0 46%,rgba(0,0,0,.26) 100%);pointer-events:none}.mono-content{position:relative;z-index:2;width:min(620px,92vw);min-height:88vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:48px 0 32px}.mono-mark{position:relative;width:min(380px,82vw);height:min(380px,82vw);display:grid;place-items:center;margin-top:auto}.mono-letter{position:absolute;font-family:Georgia,serif;font-size:clamp(155px,38vw,250px);font-weight:400;line-height:.8;color:#fff;opacity:.94}.mono-letter.left{left:3%;top:15%;transform:skewX(-8deg)}.mono-letter.right{right:2%;top:15%;transform:skewX(-8deg)}.mono-vertical{position:absolute;left:50%;top:14%;height:68%;writing-mode:vertical-rl;text-orientation:mixed;transform:translateX(-50%);font-family:Georgia,serif;font-size:17px;letter-spacing:.18em;text-transform:uppercase}.mono-countdown{display:flex;justify-content:center;gap:17px;flex-wrap:wrap;margin-top:-10px}.mono-cell{width:64px;height:64px;border:1px solid rgba(255,255,255,.82);border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1}.mono-cell b{font-size:26px;font-weight:400}.mono-cell span{font-size:11px;margin-top:5px}.scroll-note{margin-top:auto;font-size:10px;letter-spacing:.09em;text-transform:uppercase;line-height:1.35}.open-note{font-size:15px;font-weight:700;line-height:1.35;opacity:0;transition:opacity .45s ease}body.opened .open-note{opacity:1}
+    @media(max-width:720px){.mono-mark{width:min(330px,88vw);height:min(330px,88vw)}.mono-letter{font-size:clamp(135px,42vw,205px)}.mono-countdown{gap:10px}.mono-cell{width:58px;height:58px}.mono-cell b{font-size:23px}.music{right:10px;top:10px}}
+
   </style>
 </head>
 <body>
   <button class="music" id="musicBtn" aria-label="Музыка">♪</button>
   <audio id="music" loop preload="auto" src="assets/music.mp3"></audio>
-  <div class="lock" id="lock"><div class="lock-inner"><div class="lock-photo" role="img" aria-label="Фото пары"></div><button class="lock-btn" id="open" aria-label="Разблокировать приглашение"><svg width="28" height="34" viewBox="0 0 28 34" fill="none" aria-hidden="true"><rect x="5" y="14" width="18" height="16" stroke="currentColor" stroke-width="1.5"/><path d="M9 14V8C9 4.7 11.2 2 14 2C16.8 2 19 4.7 19 8V14" stroke="currentColor" stroke-width="1.5"/><path d="M14 21V25" stroke="currentColor" stroke-width="1.5"/></svg></button></div></div>
+  <div class="lock" id="lock">
+    <div class="lock-inner">
+      <div class="lock-photo" role="img" aria-label="Фото пары"></div>
+      <button class="lock-btn" id="openInvite" aria-label="Разблокировать приглашение">
+        <svg width="28" height="34" viewBox="0 0 28 34" fill="none" aria-hidden="true"><rect x="5" y="14" width="18" height="16" stroke="currentColor" stroke-width="1.5"/><path d="M9 14V8C9 4.7 11.2 2 14 2C16.8 2 19 4.7 19 8V14" stroke="currentColor" stroke-width="1.5"/><path d="M14 21V25" stroke="currentColor" stroke-width="1.5"/></svg>
+      </button>
+    </div>
+  </div>
   <div class="progress-heart" id="progressHeart">♥</div>
-  <main class="page">
-    <section class="hero" id="top"><div class="hero-content"><div class="monogram"><span class="big-letter m">A</span><span class="vertical">ALISHER & MILANA</span><span class="big-letter a">M</span></div><div class="countdown"><div class="cell"><b id="days">00</b><span>дней</span></div><div class="cell"><b id="hours">00</b><span>часов</span></div><div class="cell"><b id="minutes">00</b><span>минут</span></div><div class="cell"><b id="seconds">00</b><span>секунд</span></div></div><div class="scroll-note">ЛИСТАЙТЕ НИЖЕ</div><div class="open-note">Приглашение<br>открыто</div></div></section>
-    <section class="white"><div class="ornament"><span class="heart">♥</span></div><div class="inner"><h1 class="kicker">Дорогие<br>гости!</h1><p class="lead">В нашей жизни произойдет очень<br>важное событие – наша свадьба!</p><p class="lead" style="margin-top:22px">Мы верим и надеемся, что этот день станет красивым началом долгой и счастливой жизни.</p><div class="names-date">Алишер & Милана · 07.08.2026</div></div></section>
-    <section class="white timeline-section"><div class="ornament"><span class="heart">♥</span></div><div class="timeline"><span class="top-heart">♥</span><div class="event"><div class="event-title">Сбор гостей</div><div class="event-time">16:30</div><div class="event-desc">Будем ждать вас за 20 минут до начала церемонии</div></div><div class="event"><div class="event-title">Церемония</div><div class="event-time">17:00</div><div class="event-desc">Приготовьте платочки для трогательного момента</div></div><div class="event"><div class="event-title">Банкет</div><div class="event-time">18:00</div><div class="event-desc">Время вкусной еды, танцев и развлечений</div></div><div class="event"><div class="event-title">Завершение</div><div class="event-time">22:30</div><div class="event-desc">Мы очень благодарны, что вы провели с нами этот день!</div></div></div></section>
-    <section class="white"><div class="ornament"><span class="heart">♥</span></div><div class="inner"><p class="venue">Алматы<br>Название ресторана / адрес площадки</p><a class="map-link" href="https://yandex.ru/maps/" target="_blank" rel="noreferrer">КАРТА</a></div></section>
-    <section class="silk"><div class="inner"><div class="ornament"><span class="heart">♥</span></div><p class="note-text">Дорогие гости, приносите с собой веселье и радость в душе,<br>а подарки — в конверте!</p><p class="small-note">Если у вас будут вопросы по празднику — напишите нам, мы всё подскажем.</p></div></section>
-    <section class="white dress"><div class="ornament"><span class="heart">♥</span></div><div class="inner"><p>Будем признательны, если вы поддержите цветовую гамму нашей свадьбы</p><div class="palette" aria-label="Цветовая гамма"><span class="swatch"></span><span class="swatch"></span><span class="swatch"></span><span class="swatch"></span><span class="swatch"></span></div></div></section>
-    <section class="white" id="rsvp"><div class="ornament"><span class="heart">♥</span></div><form id="rsvpForm"><label class="form-label" for="guestName">Напишите, пожалуйста, Ваши ФИО</label><input class="field" id="guestName" name="guestName" type="text" placeholder="Ваши ФИО" required><p class="question">Сможете ли присутствовать на нашем торжестве?</p><div class="options"><label class="option"><input type="radio" name="presence" value="Я с удовольствием приду" checked> Я с удовольствием приду</label><label class="option"><input type="radio" name="presence" value="Буду со своей парой"> Буду со своей парой</label><label class="option"><input type="radio" name="presence" value="К сожалению, не смогу присутствовать"> К сожалению, не смогу присутствовать</label><label class="option"><input type="radio" name="presence" value="Сообщу позже"> Сообщу позже</label></div><p class="question">Что предпочитаете из напитков?</p><div class="options"><label class="option"><input type="checkbox" name="drink" value="Красное вино"> Красное вино</label><label class="option"><input type="checkbox" name="drink" value="Белое вино"> Белое вино</label><label class="option"><input type="checkbox" name="drink" value="Шампанское"> Шампанское</label><label class="option"><input type="checkbox" name="drink" value="Водка"> Водка</label><label class="option"><input type="checkbox" name="drink" value="Виски"> Виски</label><label class="option"><input type="checkbox" name="drink" value="Коньяк"> Коньяк</label><label class="option"><input type="checkbox" name="drink" value="Не пью алкоголь"> Не пью алкоголь</label></div><button class="submit" type="submit">Отправить</button><div class="status" id="status"></div></form></section>
-    <section class="contacts"><p>Алишер & Милана</p><p>7 августа · Алматы</p></section>
+  <nav class="nav" aria-label="Навигация">
+    <a class="mark" href="#top">A · M</a>
+    <div class="nav-links">
+      <a href="#details">Детали</a>
+      <a href="#timing">Тайминг</a>
+      <a href="#rsvp" class="keep">RSVP</a>
+    </div>
+  </nav>
+
+  <main id="top">
+    <section class="hero monochrome">
+      <div class="mono-content">
+        <div class="mono-mark">
+          <span class="mono-letter left">A</span>
+          <span class="mono-vertical">ALISHER & MILANA</span>
+          <span class="mono-letter right">M</span>
+        </div>
+        <div class="mono-countdown">
+          <div class="mono-cell"><b id="days">00</b><span>дней</span></div>
+          <div class="mono-cell"><b id="hours">00</b><span>часов</span></div>
+          <div class="mono-cell"><b id="minutes">00</b><span>минут</span></div>
+          <div class="mono-cell"><b id="seconds">00</b><span>секунд</span></div>
+        </div>
+        <div class="scroll-note">ЛИСТАЙТЕ НИЖЕ</div>
+        <div class="open-note">Приглашение<br>открыто</div>
+      </div>
+    </section>
+
+    <section id="details">
+      <div class="wrap">
+        <h2 class="section-title">Вечер в Алматы</h2>
+        <p class="section-lead">Премиальный, спокойный и элегантный формат: тёплый свет, живая атмосфера и самые близкие люди рядом.</p>
+        <div class="grid">
+          <article class="tile"><div class="num">01</div><h3>Дата</h3><p>7 августа. Точное время можно поставить после утверждения площадки.</p></article>
+          <article class="tile"><div class="num">02</div><h3>Место</h3><p>Алматы. Адрес ресторана/площадки добавим в финальной версии.</p></article>
+          <article class="tile"><div class="num">03</div><h3>Dress code</h3><p>Вечерняя классика, чёрный, шампань, молочный, бежевый и золото.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="dark" id="timing">
+      <div class="wrap" style="position:relative;z-index:1">
+        <h2 class="section-title">Тайминг дня</h2>
+        <p class="section-lead">Черновой сценарий — легко поменяем под реальное расписание.</p>
+        <div class="timeline">
+          <div class="time-row"><div class="time">16:30</div><div class="event"><h3>Сбор гостей</h3><p>Welcome drinks, первые фотографии и спокойное начало вечера.</p></div></div>
+          <div class="time-row"><div class="time">17:00</div><div class="event"><h3>Церемония</h3><p>Главные слова, кольца и момент, ради которого все собрались.</p></div></div>
+          <div class="time-row"><div class="time">18:00</div><div class="event"><h3>Ужин</h3><p>Праздничная программа, тосты, музыка и вечер с близкими.</p></div></div>
+          <div class="time-row"><div class="time">22:30</div><div class="event"><h3>Финал</h3><p>Торт, танцы и красивое завершение дня.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="place">
+      <div class="wrap map-card">
+        <div class="map-visual" aria-label="Карта Алматы">
+          <svg viewBox="0 0 800 520" preserveAspectRatio="none" aria-hidden="true">
+            <path d="M-40 180 C120 120 210 260 360 180 S590 40 850 160" fill="none" stroke="rgba(183,144,79,.32)" stroke-width="16"/>
+            <path d="M80 520 C170 350 360 360 440 210 S640 80 820 -20" fill="none" stroke="rgba(32,25,20,.12)" stroke-width="10"/>
+            <path d="M-20 360 C170 300 260 420 420 350 S650 260 840 350" fill="none" stroke="rgba(183,144,79,.18)" stroke-width="6"/>
+          </svg>
+          <div class="pin"></div>
+        </div>
+        <div class="address">
+          <div class="kicker">Location</div>
+          <h2 class="section-title" style="text-align:left;margin-bottom:18px">Алматы</h2>
+          <p style="color:var(--muted);line-height:1.7;font-size:18px;margin:0 0 24px">Точный адрес площадки добавим, когда он будет утверждён. В финальной версии кнопка будет открывать 2GIS или Google Maps.</p>
+          <a class="btn secondary" href="#rsvp">Перейти к RSVP</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="rsvp">
+      <div class="wrap">
+        <h2 class="section-title">Подтвердите присутствие</h2>
+        <p class="section-lead">Пожалуйста, ответьте, сможете ли вы быть с нами. Этот блок обязательный — в финальной версии ответы можно собирать в Google Sheets или Telegram.</p>
+        <div class="rsvp-card">
+          <form class="form" id="rsvpForm">
+            <div class="split">
+              <label>Ваше имя<input required name="name" autocomplete="name" placeholder="Например, Аружан" /></label>
+              <label>Количество гостей<select name="guests"><option>1</option><option>2</option><option>3</option><option>4</option></select></label>
+            </div>
+            <label>Ваш ответ
+              <div class="radio-row">
+                <label class="choice"><input type="radio" name="answer" value="Приду" required><span>Приду</span></label>
+                <label class="choice"><input type="radio" name="answer" value="Не приду" required><span>Не приду</span></label>
+              </div>
+            </label>
+            <label>Комментарий / пожелания<textarea name="comment" placeholder="Например: буду с +1, есть пожелания по еде"></textarea></label>
+            <button class="btn" type="submit">Отправить ответ</button>
+            <div class="note">Демо сейчас сохраняет ответ в браузере и готовит текст сообщения. Для настоящего запуска подключим бесплатный сбор ответов.</div>
+            <div class="success" id="successBox"></div>
+          </form>
+        </div>
+      </div>
+    </section>
   </main>
+
+  <footer>
+    <div class="names">Алишер & Милана</div>
+    <div>7 августа · Алматы</div>
+  </footer>
+
   <script>
-    const weddingDate='2026-08-07T16:30:00+05:00'; const lock=document.getElementById('lock'), openBtn=document.getElementById('open'), music=document.getElementById('music'), musicBtn=document.getElementById('musicBtn'), heart=document.getElementById('progressHeart');
-    async function playMusic(){try{await music.play();musicBtn.classList.add('playing')}catch(e){console.log('music blocked until user gesture', e && e.message)}}
-    openBtn.addEventListener('click',()=>{document.body.classList.add('opened');lock.classList.add('hidden');playMusic();setTimeout(()=>document.getElementById('top').scrollIntoView({behavior:'smooth'}),120)});
-    musicBtn.addEventListener('click',()=>{if(music.paused){playMusic()}else{music.pause();musicBtn.classList.remove('playing')}});
-    function pad(n){return String(n).padStart(2,'0')} function tick(){let diff=Math.max(0,new Date(weddingDate).getTime()-Date.now());let d=Math.floor(diff/86400000);diff-=d*86400000;let h=Math.floor(diff/3600000);diff-=h*3600000;let m=Math.floor(diff/60000);diff-=m*60000;let s=Math.floor(diff/1000);days.textContent=d;hours.textContent=pad(h);minutes.textContent=pad(m);seconds.textContent=pad(s)} tick(); setInterval(tick,1000);
-    window.addEventListener('scroll',()=>{const max=document.documentElement.scrollHeight-innerHeight;const p=max?scrollY/max:0;heart.style.top=(18+p*68)+'vh'});
-    rsvpForm.addEventListener('submit',(e)=>{e.preventDefault();const fd=new FormData(rsvpForm);const ans={name:fd.get('guestName'),presence:fd.get('presence'),drinks:fd.getAll('drink'),sentAt:new Date().toISOString()};localStorage.setItem('rsvp_alisher_milana',JSON.stringify(ans));status.textContent='Спасибо! Ответ сохранён.';});
+    const weddingDate = '2026-08-07T16:30:00+05:00';
+    const lock = document.getElementById('lock');
+    const openInvite = document.getElementById('openInvite');
+    const music = document.getElementById('music');
+    const musicBtn = document.getElementById('musicBtn');
+    const progressHeart = document.getElementById('progressHeart');
+    async function playMusic(){ try { await music.play(); musicBtn.classList.add('playing'); } catch(e) { console.log('music blocked', e && e.message); } }
+    openInvite.addEventListener('click', () => { document.body.classList.add('opened'); lock.classList.add('hidden'); playMusic(); });
+    musicBtn.addEventListener('click', () => { if (music.paused) playMusic(); else { music.pause(); musicBtn.classList.remove('playing'); } });
+    function pad(n){ return String(n).padStart(2,'0'); }
+    function tick(){ let diff=Math.max(0,new Date(weddingDate).getTime()-Date.now()); let d=Math.floor(diff/86400000); diff-=d*86400000; let h=Math.floor(diff/3600000); diff-=h*3600000; let m=Math.floor(diff/60000); diff-=m*60000; let sec=Math.floor(diff/1000); days.textContent=d; hours.textContent=pad(h); minutes.textContent=pad(m); seconds.textContent=pad(sec); }
+    tick(); setInterval(tick,1000);
+    window.addEventListener('scroll',()=>{ const max=document.documentElement.scrollHeight-innerHeight; const p=max?scrollY/max:0; progressHeart.style.top=(18+p*68)+'vh'; });
+    const form = document.getElementById('rsvpForm');
+    const success = document.getElementById('successBox');
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const data = Object.fromEntries(new FormData(form).entries());
+      localStorage.setItem('rsvp_alisher_milana', JSON.stringify({...data, sentAt: new Date().toISOString()}));
+      const text = `RSVP Алишер & Милана%0AИмя: ${encodeURIComponent(data.name)}%0AОтвет: ${encodeURIComponent(data.answer)}%0AГостей: ${encodeURIComponent(data.guests)}%0AКомментарий: ${encodeURIComponent(data.comment || '-')}`;
+      success.innerHTML = `Спасибо! Ответ сохранён в демо. <a href="https://t.me/share/url?url=&text=${text}" target="_blank" rel="noreferrer" style="text-decoration:underline">Отправить текст в Telegram</a>`;
+      success.classList.add('show');
+    });
   </script>
 </body>
 </html>
